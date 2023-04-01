@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>2. Program to check the leap year or not</h1>
+
+    <script>
+        function leap_year() {
+            
+            year = prompt('Enter a year: ');
+
+            if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400))  {
+                console.log('The given year: ' + year);
+                console.log(year + ' is a leap year. It has 366 days.');
+            }
+
+            else {
+                console.log('The given year: ' + year);
+                console.log(year + ' is not a leap year. It has 365 days.');
+            }
+        }
+
+        leap_year();
+        
+    </script>
+</body>
+</html>

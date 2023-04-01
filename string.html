@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>String Processing</h1>
+
+    <script>
+
+        // Create a function that get an input as string from a user
+        function string_process() {
+
+            var user_input = prompt("Enter a String: ");
+            console.log("The given user input is: " + user_input);
+
+            // Create an empty string and store the result from user
+            var stringname = new String(user_input);
+
+            // Implement the string methods
+
+            // charAt()
+            console.log("charAt() - " + stringname.charAt(0));
+
+            // charCodeAt()
+            console.log("charCodeAt() - " + stringname.charCodeAt("S"));
+
+            // concat()
+            console.log("concat() - " + stringname.concat(" I love Java"));
+
+            // indexOf()
+            console.log("indexOf() - " + stringname.indexOf('Sam'));
+
+            // lastIndexOf()
+            console.log("lastIndexOf() - " + stringname.lastIndexOf('Sam'));
+
+            // search()
+            console.log("search() - " + stringname.search('is'));
+
+            // match()
+            console.log("match() - " + stringname.match('is'));
+
+            // replace()
+            console.log("replace() - " + stringname.replace('Sam', 'Sharon'));
+
+            // substr()
+            console.log("substr() - " + stringname.substr(5, 8));
+
+            // substring()
+            console.log("substring() - " + stringname.substring(5, 8));
+
+            // toLowerCase()
+            console.log("toLowerCase() - " + stringname.toLowerCase());
+
+            // toUpperCase()
+            console.log("toUpperCase() - " + stringname.toUpperCase());
+
+            // toString()
+            console.log("toString() - " + stringname.toString());
+
+            // valueOf()
+            console.log("valueOf() - " + stringname.valueOf());
+
+        }
+
+        string_process();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('bg.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #dab9b3;
+            background-size: cover;
+        }
+
+        .div_get { 
+            position: absolute;
+            top: 20%;
+            right: 60%;
+            bottom: 15%;
+            left: 5%;
+            background: #51879c;
+            border: 5px solid #948c79;
+        }
+
+        .div_show { 
+            position: absolute;
+            top: 20%;
+            right: 5%;
+            bottom: 15%;
+            left: 60%;
+            background: #794c4c;
+            border: 5px solid #948c79;
+        }
+
+        .scroll {
+            background-color: #06554d;
+            width: 100%;
+            height: 60%;
+            overflow-y: scroll;
+        }
+
+    </style>
+</head>
+
+
+<body>
+<h1 align="center">Profile Details</h1>
+
+<div id="div_get" class="div_get">
+
+    <form id="f_get">
+        <table id="tbl_get" align="center" border="1.5">
+            <tr>
+                <td>Name:</td>
+                <td><input id="name" type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Class:</td>
+                <td><input id="class" type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Qualification:</td>
+                <td><input id="qualification" type="text"></td>
+            </tr>
+
+            <tr>
+                <td>DOB:</td>
+                <td><input id="dob" type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td><input id="gender" type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td><textarea id="address" cols="20" rows="5"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>Upload Photo:</td>
+                <td><input id="photo" type="file" accept="image/*" onchange="loadFile(event)"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button  id="submit" onclick="test(event)">Submit</button>
+                    <input id="reset" type="reset" value="Clear" />
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+
+<div id="div_show" class="div_show" class="scroll">
+    <table id="tbl_show" align="left" border="1.5" width="100%">
+        <tr>
+            <th>Profile</th>
+            <th>Details</th>
+        </tr>
+
+        <tr>
+            <td>Name:</td>
+            <td><span id="outputname"></span></td>
+        </tr>
+
+        <tr>
+            <td>Class:</td>
+            <td><span id="outputclass"></span></td>
+        </tr>
+
+        <tr>
+            <td>Qualification:</td>
+            <td><span id="outputqualification"></span></td>
+        </tr>
+
+        <tr>
+            <td>DOB:</td>
+            <td><span id="outputdob"></span></td>
+        </tr>
+
+        <tr>
+            <td>Gender:</td>
+            <td><span id="outputgender"></span></td>
+        </tr>
+
+        <tr>
+            <td>Address:</td>
+            <td><span id="outputaddress"></span></td>
+        </tr>
+
+        <tr>
+            <td>Photo:</td>
+            <td><span id="display"><img id="outputphoto" width="200"></span></td>
+        </tr>
+
+    </table>
+</div>
+
+
+<script>
+    
+    var Name = document.getElementById("name");
+    Name.onkeyup = function(){
+        document.getElementById("outputname").innerHTML = Name.value;
+    }
+
+    var Class = document.getElementById("class");
+    Class.onkeyup = function(){
+        document.getElementById("outputclass").innerHTML = Class.value;
+    } 
+    
+    var Qualification = document.getElementById("qualification");
+    Qualification.onkeyup = function(){
+        document.getElementById("outputqualification").innerHTML = Qualification.value;
+    }
+
+    var DOB = document.getElementById("dob"); 
+    DOB.onkeyup = function(){
+        document.getElementById("outputdob").innerHTML = DOB.value;
+    }
+
+    var Gender = document.getElementById("gender"); 
+    Gender.onkeyup = function(){
+        document.getElementById("outputgender").innerHTML = Gender.value;
+    }
+
+    var Address = document.getElementById("address");
+    Address.onkeyup = function(){
+        document.getElementById("outputaddress").innerHTML = Address.value;
+    }
+
+    var loadFile = function(event) {
+        var image = document.getElementById("outputphoto");
+        image.src = URL.createObjectURL(event.target.files[0]);
+    }
+
+
+</script>
+
+</body>
+</html>

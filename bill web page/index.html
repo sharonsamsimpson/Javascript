@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Bill Inventory</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="bill.js"></script>
+</head>
+
+<body>
+
+  <h1>Shop Bill Inventory</h1>
+
+  <div id="customer_details" class="customer_details_style">
+
+    <h1 align="center">Customer Details</h1>
+
+    <form id="customer_form">
+        <table id="customer_details_tbl" align="center" border="1.5">
+            <tr>
+                <td>Name:</td>
+                <td><input id="name" type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number:</td>
+                <td><input id="mob_no" type="tel"></td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td><textarea id="address" cols="20" rows="5"></textarea></td>
+            </tr>
+        </table>
+    </form>
+  </div>
+
+  <div id="product_details" class="product_details_style" class="scroll">
+    
+    <h1 align="center">Product details</h1>
+    
+    <table id="product_details_tbl" align="center" border="1.5" width="100%">
+        <tr>
+            <th>Product</th>
+            <th>Details</th>
+        </tr>
+
+        <tr>
+          <td>Name:</td>
+          <td><input type="text" id="product_name"></td>
+        </tr>
+
+        <tr>
+          <td>Id:</td>
+          <td><input type="text" id="product_id"></td>
+        </tr>
+
+        <tr>
+          <td>Cost:</td>
+          <td><input type="number" id="product_cost"></td>
+        </tr>
+
+        <tr>
+          <td>Quantity:</td>
+          <td><input type="number" id="product_quantity"></td>
+        </tr>
+
+        <tr>
+          <td>Brand:</td>
+          <td><input type="text" id="product_brand"></td>
+        </tr>
+    </table>
+  </div>
+
+  <div id="calculate_total" class="calculate_total_style">
+    <button onclick="calculate_total()">
+      <b>Total : </b>
+      <span id="total"></span> 
+    </button>
+  </div>
+
+</body>
+</html>
